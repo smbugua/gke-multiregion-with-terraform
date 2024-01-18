@@ -10,7 +10,3 @@ variable "GCP_JSON_KEY" {
   description = "GCP JSON Key"
     type = string
 }
-variable "primary_region" {
-    description = "US Central region for GCP resources"
-    type = string
-}
