@@ -9,11 +9,11 @@ terraform {
     required_providers {
     google = {
       source = "hashicorp/google"
-      version = "5.5.0"
+      version = "5.12.0"
     }
     google-beta = {
         source = "hashicorp/google-beta" #some modules require google-beta
-        version = "5.5.0"
+        version = "5.12.0"
 
     }    
   }
@@ -21,13 +21,11 @@ terraform {
 }
 #Google provider
 provider "google" {
-    alias = "us_east"
     credentials = var.GCP_JSON_KEY
     project = var.gcp_project_id
     region = var.primary_region
 }
 provider "google-beta" {
-    alias = "us_east"
     credentials = var.GCP_JSON_KEY
     project = var.gcp_project_id
     region = var.primary_region  
