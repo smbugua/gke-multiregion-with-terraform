@@ -1,1 +1,3 @@
-json-keys/
+json-keys/*
+json_keys = json-keys/*
+
