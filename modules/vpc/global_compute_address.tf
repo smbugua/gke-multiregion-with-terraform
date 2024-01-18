@@ -1,5 +1,5 @@
 resource "google_compute_global_address" "service_range" {
-    name          = "peering-address"
+    name          = "peering-address-${var.primary_region}"
     purpose       = "VPC_PEERING"
     address_type  = "INTERNAL"
     prefix_length = 16
