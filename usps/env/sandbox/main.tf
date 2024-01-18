@@ -21,21 +21,25 @@ terraform {
 }
 #Google provider
 provider "google" {
+    alias = "us_central"
     credentials = var.GCP_JSON_KEY
     project = var.gcp_project_id
     region = var.us_central_region
 }
 provider "google" {
+    alias = "us_east"
     credentials = var.GCP_JSON_KEY
     project = var.gcp_project_id
     region = var.us_east_region
 }
 provider "google-beta" {
+    alias = "us_central"
     credentials = var.GCP_JSON_KEY
     project = var.gcp_project_id
     region = var.us_central_region  
 }
 provider "google-beta" {
+    alias = "us_east"
     credentials = var.GCP_JSON_KEY
     project = var.gcp_project_id
     region = var.us_east_region  
