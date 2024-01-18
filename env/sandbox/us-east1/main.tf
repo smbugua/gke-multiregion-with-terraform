@@ -33,7 +33,7 @@ provider "google-beta" {
     region = var.primary_region  
 }
 #activate the modules
-module "vpc" {
+module "gcp-vpc" {
     source = "../../../modules/vpc"
     gcp_project_id = var.gcp_project_id
     primary_region = var.primary_region

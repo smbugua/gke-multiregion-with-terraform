@@ -35,8 +35,8 @@ provider "google-beta" {
 }
 
 #activate the modules
-module "vpc" {
-    source = "../../modules/vpc"
+module "gcp-vpc" {
+    source = "../../../modules/vpc"
     gcp_project_id = var.gcp_project_id
     primary_region = var.primary_region
     ip_cidr_range = var.ip_cidr_range
