@@ -3,11 +3,7 @@ resource "google_container_cluster" "my_cluster" {
     location           = "${var.primary_region}"
     network = "usps-sandbox-${var.primary_region}-network"
     subnetwork = "subnet-zone1"
-
-    ip_allocation_policy {
-        cluster_secondary_range_name = "pods"
-        services_secondary_range_name = "services"
-    }
+    initial_node_count = 1
 
     enable_autopilot = true
 }
