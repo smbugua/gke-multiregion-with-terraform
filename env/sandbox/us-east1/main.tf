@@ -45,3 +45,8 @@ module "gcp-ids" {
     gcp_project_id = var.gcp_project_id
     primary_region = var.primary_region
 }
+module "gcp-gke" {
+    source = "../../../modules/gke"
+    gcp_project_id = var.gcp_project_id
+    primary_region = var.primary_region
+}
