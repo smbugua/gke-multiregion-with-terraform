@@ -1,7 +1,7 @@
 resource "google_container_cluster" "my_cluster" {
-    name               = "usps-autopilot-cluster"
+    name               = "autopilot-cluster"
     location           = "${var.primary_region}"
-    network = "usps-sandbox-${var.primary_region}-network"
+    network = "sandbox-${var.primary_region}-network"
     subnetwork = "subnet-zone1"
     initial_node_count = 1
 

@@ -1,7 +1,7 @@
-resource "google_bigquery_dataset" "usps-sandbox-dataset" {
-  dataset_id                  = "usps-sandbox-dataset"
-  friendly_name               = "usps-sandbox"
-  description                 = "This is a usps-sandbox description"
+resource "google_bigquery_dataset" "sandbox-dataset" {
+  dataset_id                  = "sandbox-dataset"
+  friendly_name               = "sandbox"
+  description                 = "This is a sandbox description"
   location                    = "US"
   default_table_expiration_ms = 3600000
 
@@ -11,8 +11,8 @@ resource "google_bigquery_dataset" "usps-sandbox-dataset" {
 }
 
 resource "google_bigquery_table" "default" {
-  dataset_id = google_bigquery_dataset.usps-sandbox-dataset.dataset_id
-  table_id   = "usps-sandbox-table"
+  dataset_id = google_bigquery_dataset.sandbox-dataset.dataset_id
+  table_id   = "-sandbox-table"
 
   time_partitioning {
     type = "DAY"
@@ -42,7 +42,7 @@ EOF
 }
 
 resource "google_bigquery_table" "sheet" {
-  dataset_id = google_bigquery_dataset.usps-sandbox-dataset.dataset_id
+  dataset_id = google_bigquery_dataset.sandbox-dataset.dataset_id
   table_id   = "sheet"
 
   external_data_configuration {
