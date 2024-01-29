@@ -34,7 +34,7 @@ resource "google_kms_crypto_key" "apigee_key" {
 
 resource "google_project_service_identity" "apigee_sa" {
   provider = google-beta
-  project  = google_project.project.project_id
+  project  = "${var.gcp_project_id}"
   service  = google_project_service.apigee.service
 }
 
