@@ -1,9 +1,9 @@
 terraform {
   backend "remote"{
     hostname = "app.terraform.io"
-    organization = "usps-sanbox"
+    organization = "kiran-sanbox"
     workspaces {
-      name = "usps-sandbox-us-central1"
+      name = "sandbox-us-central1"
     }
   }
     required_providers {

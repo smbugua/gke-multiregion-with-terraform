@@ -1,6 +1,6 @@
-# USPS GCP Terraform
+# Sandbox GCP Terraform
 
-This project involves the creation and management of a Google Cloud Platform (GCP) infrastructure for USPS using Terraform. The following are the key components and steps involved in this project:
+This project involves the creation and management of a Google Cloud Platform (GCP) infrastructure for GKE sandbox using Terraform. The following are the key components and steps involved in this project:
 
 ## 1. Network and Zones
 - Define and create the Virtual Private Cloud (VPC) network in the us-central1 and us-east1 regions.
