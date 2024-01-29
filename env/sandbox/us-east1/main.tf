@@ -1,7 +1,7 @@
 terraform {
   backend "remote"{
     hostname = "app.terraform.io"
-    organization = "kiran-sanbox"
+    organization = "<terraform-org-name>"
     workspaces {
       name = "sandbox-us-east1"
     }
