@@ -1,10 +1,8 @@
 terraform {
-  backend "remote"{
-    hostname = "app.terraform.io"
-    organization = "<terraform-org-name>"
-    workspaces {
-      name = "sandbox-us-east1"
-    }
+  backend "gcs" {
+    bucket  = "my-gcs-bucket"
+    prefix  = "terraform/state"
+    credentials = var.GCP_JSON_KEY
   }
     required_providers {
     google = {
