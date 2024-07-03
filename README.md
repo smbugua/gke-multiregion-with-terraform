@@ -1,4 +1,4 @@
-# Sandbox GCP Terraform
+# Sandbox Multi Region GCP Terraform
 
 This project involves the creation and management of a Google Cloud Platform (GCP) infrastructure for GKE sandbox using Terraform. The following are the key components and steps involved in this project:
 
